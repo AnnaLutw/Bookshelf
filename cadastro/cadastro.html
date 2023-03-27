@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cadastro</title>
-    <link rel="icon" href="/assets/logo.png">
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 
 <body>
@@ -23,22 +24,22 @@
                         </span>
 
                         <div class="wrap-input margin-bottom-35">
-                            <input class="input-form" type="name" name="name" autocomplete="off">
+                            <input id="usuario" class="input-form" type="usuario" name="name" autocomplete="off">
                             <span class="focus-input-form" data-placeholder="Usuário"></span>
                         </div>
 
                         <div class="wrap-input margin-top-35 margin-bottom-35">
-                            <input class="input-form" type="email" name="email" autocomplete="off">
+                            <input  id="email" class="input-form" type="email" name="email" autocomplete="off">
                             <span class="focus-input-form" data-placeholder="E-mail"></span>
                         </div>
 
                         <div class="wrap-input margin-bottom-35">
-                            <input class="input-form" type="password" name="password">
+                            <input  id="senha" class="input-form" type="senha" name="password">
                             <span class="focus-input-form" data-placeholder="Senha"></span>
                         </div>
 
                         <div class="container-register-form-btn">
-                            <button class="register-form-btn">Cadastrar</button>
+                            <button onclick="cadastrar()" class="register-form-btn">Cadastrar</button>
                         </div>
 
                         <ul class="register-utils">
@@ -56,6 +57,7 @@
             </div>
         </div>
     </div>
+   
 </body>
-
+ <script src="script.js"></script>
 </html>

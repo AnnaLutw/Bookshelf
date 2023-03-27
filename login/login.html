@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login</title>
-    <link rel="icon" href="/assets/logo.png">
+    <link rel="icon" href="./assets/logo.png">
     <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -23,17 +24,17 @@
                         </span>
 
                         <div class="wrap-input margin-top-35 margin-bottom-35">
-                            <input class="input-form" type="email" name="email" autocomplete="off">
-                            <span class="focus-input-form" data-placeholder="E-mail"></span>
+                            <input id="email" class="input-form" type="text" name="email" autocomplete="off">
+                            <span class="focus-input-form" data-placeholder="Email"></span>
                         </div>
 
                         <div class="wrap-input margin-bottom-35">
-                            <input class="input-form" type="password" name="password">
+                            <input id="senha" class="input-form" type="senha" name="senha">
                             <span class="focus-input-form" data-placeholder="Senha"></span>
                         </div>
 
                         <div class="container-login-form-btn">
-                            <button class="login-form-btn">Login</button>
+                            <button onclick="logar()" id="button" class="login-form-btn">Login</button>
                         </div>
 
                         <ul class="login-utils">
