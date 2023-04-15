@@ -17,3 +17,17 @@ init = function(){
         }
     }
 }
+
+/*pesquisar*/ 
+pesquisar=function(){
+    const campoPesquisa = document.getElementById('campoBuscar').value;
+    if(campoPesquisa !== ''){
+        window.location='../pesquisados/index.html?query='+ campoPesquisa
+    }
+    else{
+        alert("Preencha o campo")
+    }
+    
+  }
+  
+  document.body.onload= init;

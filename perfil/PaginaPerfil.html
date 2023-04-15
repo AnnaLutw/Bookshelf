@@ -17,21 +17,18 @@
 
 <body class="body">
   <!--Cabeçalho-->
-  <header>
-    <div id="navbar">
-      <div id="logo">
-        <img src="/assets/logo.png" alt="Aqui ficaria a logo" id="logo">
-      </div>
-      <div id="alinhaLoginCadastro">
-        <button id="login">Login</button>
-        <button id="registro">Cadastro</button>
-      </div>
-      <form action="">
-        <input type="text" placeholder="" id="campoBuscar">
-        <button type="submit" id="lupaPesquisa"><i class="bi bi-search"></i></button>
-      </form>
+  <nav id="navbar">
+    <a href="/index.html"><img src="/assets/logo.png" alt="logo" id="logo"></a>
+    <div id="alinhaLoginCadastro">
+        <a href="/login/login.html"> <button class="btn btn-primary" id="btn">Login</button></a>
+        <a href="/cadastro/cadastro.html"></a> <button class="btn btn-primary" id="btn">Cadastro</button></a>
+        <a href="/perfil/PaginaPerfil.html"> <button class="btn btn-primary" id="btn">Perfil</button></a>
     </div>
-  </header>
+    <div id="row" class="input-field">
+        <input id="campoBuscar" type="text" class="form-control" placeholder="Buscar Livro">
+        <button id="btnPesquisa" class="btn btn-primary" onclick="pesquisar()">Buscar</button>
+    </div>
+</nav>
 
   <!---Área de Informação do Usuário-->
   
@@ -165,6 +162,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="PaginaPerfil.js"></script>
+  <script src="/comum/comum.js"></script>
 </body>
 
 </html>

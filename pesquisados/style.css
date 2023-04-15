@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100&display=swap');
+*{
+    margin: 0;
+}
+body{
+    background-color: #D1C6BB;
+    
+}
+#navbar{
+    background-color: #a52a2a;
+    height: 200px;
+}
+#logo{ 
+    width: 130px;
+    margin-left: 50px;
+    margin-top: 22px;
+}
+#btn{
+    margin-left: 12px;
+    background-color: #D1C6BB;
+    border: none;
+    color: black;
+    width: 200px;
+}
+
+#alinhaLoginCadastro{
+    margin-left: 700px;
+    margin-top: -100px;
+    width: 50%;
+}
+#row{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 41%;
+    
+    width: 25%;
+    
+}
+
+#btnPesquisa{
+    background-color: #000000;
+    border: none;
+    font-size: 20px;
+}
+
+
+
+
+#main{
+    display: flex;
+    
+}
+.otherRow{
+    display: flex;
+    justify-content: center;
+}
+.container1{ 
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#books{
+    margin-left: 90px;
+    margin-top: 30px;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #a52a2a;
+}
+footer li{
+    list-style: none;
+}
