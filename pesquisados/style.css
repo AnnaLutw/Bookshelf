@@ -43,13 +43,6 @@ body{
     font-size: 20px;
 }
 
-
-
-
-#main{
-    display: flex;
-    
-}
 .otherRow{
     display: flex;
     justify-content: center;
@@ -62,9 +55,13 @@ body{
 }
 
 #books{
-    margin-left: 90px;
-    margin-top: 30px;
+    margin-top: 40px;
+    width: 94%;
+    display: flex;
+    border-width: 2px;
+    border-color: #ffffff;
 }
+
 
 footer{
     margin-top: 50px;

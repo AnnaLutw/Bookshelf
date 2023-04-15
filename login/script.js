@@ -28,3 +28,12 @@ logar = function(){
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("email=" + email + "&senha=" + senha);
 }
+
+  //<![CDATA[
+    $(window).on('load', function () {
+        $('#preloader .inner').fadeOut();
+        $('#preloader').delay(5).fadeOut('slow'); 
+        $('body').delay(5).css({'overflow': 'visible'});
+      })
+      //]]>
+      

@@ -31,3 +31,23 @@ pesquisar=function(){
   }
   
   document.body.onload= init;
+
+  
+  //<![CDATA[
+    $(window).on('load', function () {
+        $('#preloader .inner').fadeOut();
+        $('#preloader').delay(500).fadeOut('slow'); 
+        $('body').delay(100).css({'overflow': 'visible'});
+      })
+      //]]>
+      
+//APERTAR ENTER
+ document.addEventListener("keypress", function(e) {
+   if(e.key === 'Enter') {
+        
+        var btn = document.querySelector("#btnPesquisa");
+          
+        btn.click();
+        
+    }
+});

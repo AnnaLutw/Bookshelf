@@ -2,17 +2,18 @@ const mostraLivro = function(data){
 
     let dadosHTML ='';
     let dadosLivros = JSON.parse(data.target.response);
+    localStorage.setItem('books', data.target.response)
     const imagemPadrao = 'http://books.google.com/books/content?id=-bF2CwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api';
 
     for(let i=0; i<dadosLivros.items.length ; i++){
         let livro = dadosLivros.items[i];
         dadosHTML+=`
         <div class="col-3" id="listaLivros" >
-            <div id="books" class="card col-sm-9 "  >
-            <a href="/infoLivro/index.html"> <img class="card-img-top" src="${livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : imagemPadrao}" alt="Card image cap"></a>
+            <div id="books" class="card col-sm-12 "  >
+            <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="${livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : imagemPadrao}" alt="Card image cap"></a>
                 <div class="card-body">
                         <h5 class="card-title">${livro.volumeInfo.title}</h5>
-                        <a href="detalhes.html?id=${livro.id}" class="btn btn-dark">+Já li</a>
+                        <a href="detalhes.html" class="btn btn-dark">+Já li</a>
                     </div>
             </div>
         </div>
@@ -29,7 +30,7 @@ const init= function(){
     const param = getParameter('query');
     let xhr=new XMLHttpRequest();
     let url = "https://www.googleapis.com/books/v1/volumes?q=" + param;
-    xhr.onload = mostraLivro;
+    xhr.onload = mostraLivro; 
     xhr.oneerror=
     xhr.open('GET',url, true);
     xhr.send();
