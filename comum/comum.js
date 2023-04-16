@@ -36,7 +36,7 @@ pesquisar=function(){
   //<![CDATA[
     $(window).on('load', function () {
         $('#preloader .inner').fadeOut();
-        $('#preloader').delay(500).fadeOut('slow'); 
+        $('#preloader').delay(50).fadeOut('slow'); 
         $('body').delay(100).css({'overflow': 'visible'});
       })
       //]]>

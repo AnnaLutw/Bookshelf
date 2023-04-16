@@ -51,3 +51,13 @@ function getParameter(theParameter) {
     }
     return false;
 }
+
+//NEGOCIO DE LOADING
+//<![CDATA[
+    $(window).on('load', function () {
+        $('#preloader .inner').fadeOut();
+        $('#preloader').delay(500).fadeOut('slow'); 
+        $('body').delay(100).css({'overflow': 'visible'});
+      })
+      //]]>
+      
