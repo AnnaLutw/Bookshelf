@@ -25,21 +25,6 @@ const mostraLivro = function(data){
 const mostraErro=(data) =>{
     alert('erro na aquisição');
 }
-
-const init= function(){
-    const param = getParameter('query');
-    let xhr=new XMLHttpRequest();
-    let url = "https://www.googleapis.com/books/v1/volumes?q=" + param;
-    xhr.onload = mostraLivro; 
-    xhr.oneerror=
-    xhr.open('GET',url, true);
-    xhr.send();
-}
-pesquisar = function(){
-    window.location='/pesquisados/index.html?query='+ document.getElementById('campoBuscar').value;
-}
-document.body.onload= init;
-
 function getParameter(theParameter) {
     var params = window.location.search.substr(1).split('&');
 
@@ -52,6 +37,44 @@ function getParameter(theParameter) {
     return false;
 }
 
+const init= function(){
+    const param = getParameter('query');
+    let xhr=new XMLHttpRequest();
+    let url = "https://www.googleapis.com/books/v1/volumes?q=" + param;
+    xhr.onload = mostraLivro; 
+    xhr.oneerror=
+    xhr.open('GET',url, true);
+    xhr.send();
+}
+
+
+
+
+
+
+pesquisar=function(){
+    const campoPesquisa = document.getElementById('campoBuscar').value;
+    if(campoPesquisa !== ''){
+        window.location='../pesquisados/index.html?query='+ campoPesquisa
+    }
+    else{
+        alert("Preencha o campo")
+    }  
+} 
+const initLogin = function(){
+    let usuarioString = localStorage.getItem('usuario');
+    if(usuarioString != undefined && usuarioString != 'undefined'){
+        let usuario = JSON.parse(usuarioString);
+        if(usuario != null && usuario != ""){
+
+            document.getElementById('loginUser').innerHTML = usuario.usuario;
+        }
+        else{
+            document.getElementById('loginUser').innerHTML = '  <a href="/login/login.html"> <button class="btn btn-primary" id="btn">Login</button></a>  <a href="/cadastro/cadastro.html"> <button class="btn btn-primary" id="btn">Cadastro</button></a>';
+        }
+    }
+}
+
 //NEGOCIO DE LOADING
 //<![CDATA[
     $(window).on('load', function () {
@@ -60,4 +83,3 @@ function getParameter(theParameter) {
         $('body').delay(100).css({'overflow': 'visible'});
       })
       //]]>
-      

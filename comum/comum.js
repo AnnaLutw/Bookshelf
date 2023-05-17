@@ -4,20 +4,20 @@ logout = function(){
 
 }
 
-init = function(){
+const initLogin = function(){
     let usuarioString = localStorage.getItem('usuario');
     if(usuarioString != undefined && usuarioString != 'undefined'){
         let usuario = JSON.parse(usuarioString);
-        if(usuario != null && usuaio != ""){
+        if(usuario != null && usuario != ""){
 
-            document.getElementById('loginUser').innerHTML = usuario.usuario;
+            document.getElementById('loginUser').innerHTML = usuario.usuario ;
         }
         else{
-            document.getElementById('loginUser').innerHTML = '  <a style="color :white" class="nav-link" href="/login/login.html">LOGIN</a>';
+            document.getElementById('loginUser').innerHTML = '  <a href="/login/login.html"> <button class="btn btn-primary" id="btn">Login</button></a>  <a href="/cadastro/cadastro.html"> <button class="btn btn-primary" id="btn">Cadastro</button></a>';
         }
     }
 }
-
+document.body.onload= initLogin;
 /*pesquisar*/ 
 pesquisar=function(){
     const campoPesquisa = document.getElementById('campoBuscar').value;
@@ -26,17 +26,16 @@ pesquisar=function(){
     }
     else{
         alert("Preencha o campo")
-    }
-    
-  }
-  
-  document.body.onload= init;
+    }  
+} 
+
 
   
-  //<![CDATA[
+//NEGOCIO DE LOADING
+//<![CDATA[
     $(window).on('load', function () {
         $('#preloader .inner').fadeOut();
-        $('#preloader').delay(50).fadeOut('slow'); 
+        $('#preloader').delay(500).fadeOut('slow'); 
         $('body').delay(100).css({'overflow': 'visible'});
       })
       //]]>

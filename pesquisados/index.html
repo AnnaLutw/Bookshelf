@@ -13,11 +13,11 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         
     <title>Pesquisados</title>
-    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+   
     
 </head>
 
-<body style="background-color: #D1C6BB;">
+<body onload="init(), initLogin()" style="background-color: #D1C6BB;">
     
      <!-- início do preloader -->
   <div id="preloader">
@@ -35,8 +35,8 @@
     <nav id="navbar">
         <a href="/index.html"><img src="/assets/logo.png" alt="logo" id="logo"></a>
         <div id="alinhaLoginCadastro">
-            <a href="/login/login.html"> <button class="btn btn-primary" id="btn">Login</button></a>
-            <a href="/cadastro/cadastro.html"></a> <button class="btn btn-primary" id="btn">Cadastro</button></a>
+            <div id="loginUser"></div>
+             
             <a href="/perfil/PaginaPerfil.html"> <button class="btn btn-primary" id="btn">Perfil</button></a>
         </div>
         <div id="row" class="input-field">
@@ -60,12 +60,12 @@
             <li class="nav-link"><a href="#">Suporte</a></li>
           </ul>
     </footer>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script src="/comum/comum.js"></script>
+   
+  
     
-    
+
 </body>
 
 </html>

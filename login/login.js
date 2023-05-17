@@ -1,13 +1,11 @@
 
-
 logar = function(){
     let email = document.querySelector("#email").value;
     let senha = document.querySelector("#senha").value;
-    let url = "http://localhost:8080/api/security/login";
+    let url = "http://localhost:8080/api/usuarios/login";
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-        if (xhr.readyState == XMLHttpRequest.DONE) {
-     
+      
             let usuario = xhr.responseText;
 
             if(usuario == null || usuario == ""){
@@ -19,7 +17,7 @@ logar = function(){
                 window.location.href= "../index.html"
                 console.log("Logado");
             }
-        }
+        
 
 
     }
