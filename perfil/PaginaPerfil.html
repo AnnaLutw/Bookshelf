@@ -16,7 +16,7 @@
 </head>
 
 
-<body class="body">
+<body class="body" onload="mostraUsuario()">
    <!-- início do preloader -->
    <div id="preloader">
     <div class="inner">
@@ -32,23 +32,19 @@
   <!--Cabeçalho-->
   <nav id="navbar">
     <a href="/index.html"><img src="/assets/logo.png" alt="logo" id="logo"></a>
-    <div id="alinhaLoginCadastro">
-        <div id="loginUser"></div>
-         
-        <a href="/perfil/PaginaPerfil.html"> <button class="btn btn-primary" id="btn">Perfil</button></a>
-    </div>
-    <div id="row" class="input-field">
-        <input id="campoBuscar" type="text" class="form-control" placeholder="Buscar Livro">
-        <button id="btnPesquisa" class="btn btn-primary" onclick="pesquisar()">Buscar</button>
-    </div>
-</nav>
+    <span id="alinhaLoginCadastro"> </span>         
+        <div id="row" class="input-field">
+            <input id="campoBuscar" type="text" class="form-control" placeholder="Buscar Livro">
+            <button id="btnPesquisa" class="btn btn-primary" onclick="pesquisar()">Buscar</button>
+        </div>            
+</nav>  
 
   <!---Área de Informação do Usuário-->
   
-  <div class="row">
-    <div class="card">
+ 
+    <div class="cardInfo">
       <div id="nome">
-        <p> Nome do úsuario: </p>
+        <p id="userName"> </p>
       </div>
       <div id="livroslidos">
         <p> Quantidade de livros lidos: </p>
@@ -60,122 +56,108 @@
         <p> Quantidade de resenhas: </p>
       </div>
     </div>
-  </div>
+ 
 
+<div class="lidos">
+  <h1>Já lidos</h1>
+</div>
   <!--Carrosseis de livros lidos-->
-
-  <div class="swiper mySwiper">
-    <h1 style="text-align: center; color: #000000;""> Mais Recentes</h1>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
+<div id="container-fluid">
+    <div class="otherRow" id="listaLivros">
+        <div id="container1" class="container1">
+          <div class="col-3" id="listaLivros" >
+              <div id="books" class="card col-sm-12 "  >
+                <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                        <h5 class="card-title">titulo</h5>
+                       
+                  </div>      
+              </div>  
+          </div>
+          <div class="col-3" id="listaLivros" >
+            <div id="books" class="card col-sm-12 "  >
+              <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                      <h5 class="card-title">titulo</h5>
+                     
+                </div>      
+            </div>  
+                </div>
+                <div class="col-3" id="listaLivros" >
+                  <div id="books" class="card col-sm-12 "  >
+                    <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                            <h5 class="card-title">titulo</h5>
+                           
+                      </div>      
+                  </div>  
+              </div>
+              <div class="col-3" id="listaLivros" >
+                <div id="books" class="card col-sm-12 "  >
+                  <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+                  <div class="card-body">
+                          <h5 class="card-title">titulo</h5>
+                        
+                    </div>      
+                </div>  
+            </div>
+    
+        </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+</div>
 
-  <p></p>
-
-  <div class="swiper mySwiper">
-    <h1 style="text-align: center; color: #000000;""> Mais Lidos </h1>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
+<div class="lidos">
+  <h1>Favoritos</h1>
+</div>
+  <!--Carrosseis de livros lidos-->
+<div id="container-fluid">
+    <div class="otherRow" id="listaLivros">
+        <div id="container1" class="container1">
+          <div class="col-3" id="listaLivros" >
+              <div id="books" class="card col-sm-12 "  >
+                <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                        <h5 class="card-title">titulo</h5>
+                        
+                  </div>      
+              </div>  
+          </div>
+          <div class="col-3" id="listaLivros" >
+            <div id="books" class="card col-sm-12 "  >
+              <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                      <h5 class="card-title">titulo</h5>
+                     
+                </div>      
+            </div>  
+                </div>
+                <div class="col-3" id="listaLivros" >
+                  <div id="books" class="card col-sm-12 "  >
+                    <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                            <h5 class="card-title">titulo</h5>
+                          
+                      </div>      
+                  </div>  
+              </div>
+              <div class="col-3" id="listaLivros" >
+                <div id="books" class="card col-sm-12 "  >
+                  <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
+                  <div class="card-body">
+                          <h5 class="card-title">titulo</h5>
+                         
+                    </div>      
+                </div>  
+            </div>
+    
+        </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+</div>
 
-  <p></p>
-
-  <div class="swiper mySwiper">
-    <h1 style="text-align: center; color: #000000;""> Favoritos </h1>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/capaDoLivro.jpg" alt="">
-      </div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="/comum/comum.js"></script>
-  <script src="PaginaPerfil.js"></script>
+  <script src="/perfil/PaginaPerfil.js"></script>
 
 </body>
 

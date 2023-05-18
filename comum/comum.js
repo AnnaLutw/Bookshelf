@@ -3,21 +3,44 @@ logout = function(){
     window.location.href= "/index.html";
 
 }
-
 const initLogin = function(){
-    let usuarioString = localStorage.getItem('usuario');
-    if(usuarioString != undefined && usuarioString != 'undefined'){
+    let usuarioString = localStorage.getItem('usuario'); 
+    if(usuarioString == undefined || usuarioString == 'undefined'){
+        
+        document.getElementById('alinhaLoginCadastro').innerHTML=`     
+        <ul class="listaNav"> 
+            <li class="nav-item" >
+                <a href="/login/login.html"> <button class="btn btn-primary" id="btn">LOGIN</button></a>
+            </li>
+            <li class="nav-item" >
+                <a href="/cadastro/cadastro.html"> <button class="btn btn-primary" id="btn">CADASTRO</button></a>
+            </li>
+            
+        </ul>
+        `;
+    }else{
         let usuario = JSON.parse(usuarioString);
-        if(usuario != null && usuario != ""){
-
-            document.getElementById('loginUser').innerHTML = usuario.usuario ;
-        }
-        else{
-            document.getElementById('loginUser').innerHTML = '  <a href="/login/login.html"> <button class="btn btn-primary" id="btn">Login</button></a>  <a href="/cadastro/cadastro.html"> <button class="btn btn-primary" id="btn">Cadastro</button></a>';
-        }
+        if(usuario != null && usuario != "" ){
+            document.getElementById('alinhaLoginCadastro').innerHTML=`
+            <ul class="listaNav">
+                <li class="nav-item" >
+                    <span id="loginUser"> ${usuario.usuario}</span>
+                </li>
+                <li class="nav-item" >
+                    <a href="/perfil/PaginaPerfil.html"> <button class="btn btn-primary" id="btn">Perfil</button></a>
+                </li>
+                <li class="nav-item" >
+                    <a href="" onclick="logout()"> <button class="btn btn-primary" id="btn">SAIR</button></a>
+                </li>
+            </ul>
+            `;
+        }      
     }
 }
+
 document.body.onload= initLogin;
+
+
 /*pesquisar*/ 
 pesquisar=function(){
     const campoPesquisa = document.getElementById('campoBuscar').value;

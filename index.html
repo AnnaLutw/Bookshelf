@@ -15,20 +15,19 @@
     <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
 </head>
 
-<body onload="initLogin()">
-    <!--navbar-->
-    <nav id="navbar">
-        <a href="/index.html"><img src="/assets/logo.png" alt="logo" id="logo"></a>
-        <div id="alinhaLoginCadastro">
-            <h5 id="loginUser"></h5>
-             
-            <a href="/perfil/PaginaPerfil.html"> <button class="btn btn-primary" id="btn">Perfil</button></a>
-        </div>
-        <div id="row" class="input-field">
-            <input id="campoBuscar" type="text" class="form-control" placeholder="Buscar Livro">
-            <button id="btnPesquisa" class="btn btn-primary" onclick="pesquisar()">Buscar</button>
-        </div>
-    </nav>
+<body >
+    
+        <nav id="navbar">
+            <a href="/index.html"><img src="/assets/logo.png" alt="logo" id="logo"></a>
+            <span id="alinhaLoginCadastro"> </span>         
+                <div id="row" class="input-field">
+                    <input id="campoBuscar" type="text" class="form-control" placeholder="Buscar Livro">
+                    <button id="btnPesquisa" class="btn btn-primary" onclick="pesquisar()">Buscar</button>
+                </div>            
+        </nav>  
+      
+   
+    
     <div id="main"> 
         <div id="divMaisLidos">
             <h2 id="tituloMaisLidos">Mais Lidos</h2>

@@ -61,3 +61,52 @@
   } 
 }
 /* end: Preloader */
+
+/* navbar */
+
+*{
+  margin: 0;
+}
+#navbar{
+  background-color: #a52a2a;
+  height: 200px;
+}
+#logo{ 
+  width: 130px;
+  margin-left: 50px;
+  margin-top: 22px;
+}
+#btn{
+  margin-left: 12px;
+  background-color: #D1C6BB;
+  border: none;
+  color: black;
+  width: 200px;
+}
+.listaNav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul{
+  list-style: none;
+}
+#alinhaLoginCadastro ul{
+  display: flex;
+
+  width: 50%;
+}
+#row{
+  display: flex;
+  margin-top: -57px;
+  margin-left: 41%;
+  
+  width: 25%;
+  
+}
+
+#btnPesquisa{
+  background-color: #000000;
+  border: none;
+  font-size: 20px;
+}

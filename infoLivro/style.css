@@ -1,46 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100&display=swap');
-*{
-    margin: 0;
-}
-#navbar{
-    background-color: #a52a2a;
-    height: 200px;
-  }
-  #btn{
-    margin-left: 12px;
-    background-color: #D1C6BB;
-    border: none;
-    color: black;
-    width: 200px;
-  }
-  
-  #alinhaLoginCadastro{
-    display: flex; 
-    margin-left: 700px;
-    margin-top: -100px;
-    width: 50%;
-  }
-  #row{
-    display: flex;
-    margin-top: 40px;
-    margin-left: 41%;
-    
-    width: 25%;
-    
-  }
-  
-  #btnPesquisa{
-    background-color: #000000;
-    border: none;
-    font-size: 20px;
-  }
-  
-  #logo{
-    
-    width: 130px;
-    margin-left: 50px;
-    margin-top: 22px;
-  }
+
 #tituloMaisLidos{
  text-align: center;
  font-family: 'Imbue', serif;
