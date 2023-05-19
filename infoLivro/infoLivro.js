@@ -17,8 +17,10 @@ if(idxFilme>-1){
                     <li class="mb-1"><strong>Data de publicação:</strong> <span>${livro.volumeInfo.publishedDate}</span></li>
                     <li class="mb-3"><strong>Lingua:</strong> <span>${livro.volumeInfo.language}</span></li>
                     <li class="mb-3"><strong>Total Paginas:</strong> <span>${livro.volumeInfo.pageCount}</span></li>
-                    <li class="mb-3"><strong>Avaliação:</strong> <span>${livro.volumeInfo.averageRating}</span></li>
-
+                    <li id="verifica" class="mb-3"><strong>Avaliação:</strong> <span>${livro.volumeInfo.averageRating}</span></li>
+                    <li  class="mb-3"> <a onclick="alertaAdc()" href="" class="btn btn-dark">+ Já lido</a></li>
+                    <li class="mb-3"> <a href="/perfil/PaginaPerfil.html?id=${livro.id}" class="btn btn-dark">+ favorito</a></li>
+                    
                 </ul>
                 <h3 class="mb-3">Descrição do livro:</h3>
                 <p>${livro.volumeInfo.description}</p>
@@ -31,3 +33,15 @@ else{
 }
 
 "Codigo do Livro: " + params.get('id');
+
+alertaAdc = function(){
+    let usuarioString = localStorage.getItem('usuario'); 
+    if(usuarioString == undefined || usuarioString == 'undefined'){
+        
+        alert("faça login para adicionar livros aos favoritos");
+    }
+    else{
+        document.getElementById('verifica').innerHTML = ` <li  class="mb-3"> <a onclick="alertaAdc()" href="/perfil/PaginaPerfil.html?id=${livro.id}" class="btn btn-dark">+ Já lido</a></li>`
+    }
+
+}

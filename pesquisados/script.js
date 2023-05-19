@@ -13,7 +13,7 @@ const mostraLivro = function(data){
             <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="${livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : imagemPadrao}" alt="Card image cap"></a>
                 <div class="card-body">
                         <h5 class="card-title">${livro.volumeInfo.title}</h5>
-                        <a href="detalhes.html" class="btn btn-dark">+Já li</a>
+                       
                     </div>
             </div>
         </div>
