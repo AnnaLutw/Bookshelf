@@ -51,3 +51,16 @@ sucesso = (data)=>{
 
     return decodeURI(cookies);
 }
+
+window.onload = function() {
+    var inputs = document.getElementsByClassName('input-form');
+    for(let i=0; i<inputs.length; i++) {
+        inputs[i].addEventListener('blur', function() {
+            if(this.value.trim() !== "") {
+                this.classList.add('has-val');
+            } else {
+                this.classList.remove('has-val');
+            }
+        })
+    }
+}

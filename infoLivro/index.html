@@ -13,7 +13,7 @@
     <title>Informações do Livro</title>
 </head>
 
-<body >
+<body style="background-color: #E8F0F2;;">
        <!-- início do preloader -->
   <div id="preloader">
     <div class="inner">
@@ -26,21 +26,17 @@
     </div>
 </div>
 <!-- fim do preloader -->
-    <!--navbar-->
-    <nav id="navbar">
-        <a href="/index.html"><img src="/assets/logo.png" alt="logo" id="logo"></a>
-        <span id="alinhaLoginCadastro"> </span>         
-            <div id="row" class="input-field">
-                <input id="campoBuscar" type="text" class="form-control" placeholder="Buscar Livro">
-                <button id="btnPesquisa" class="btn btn-primary" onclick="pesquisar()">Buscar</button>
-            </div>            
-    </nav>  
+
+<div id="navbarLoggedOut" ></div>
+
+<div id="navbarLoggedIn" ></div>
+    
     
     <div id="detalheLivros" class="container mt-5">   </div>  
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="infoLivro.js"></script>
-    <script src="/comum/comum.js"></script>
+    <script src="../comum/comum.js"></script>
     
 </body>
 

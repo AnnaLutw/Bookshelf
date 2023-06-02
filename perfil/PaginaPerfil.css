@@ -1,56 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Imbue:wght@100&display=swap");
-
-.body {
-  background-color: #d1c6bb;
+*{
+  padding: 0;
+  margin: 0;
+}
+.navbar-links{
+  padding: 15px;
+  color: #337ab7;
+  font-family: 'Nunito', sans-serif;
 }
 
+.profile-info {
+  padding: 20px;
+  border-radius: 8px;
+}
 
-.cardInfo {
+.profile-info h3 {
+  font-size: 24px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.profile-info p {
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.profile-info {
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  background-color: white;
-  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-  padding: 13px;
-  margin: 20px;
-  width: 50%;
-  
+  height: 45vh;
 }
-.card{
+.lidos {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-  padding: 13px;
-  margin: 20px;
- width: 50%;
+  height: 100px; 
 }
 
-
-.otherRow{
+.container1 {
   display: flex;
-  justify-content: center;
-}
-.container1{ 
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#books{
-  margin-top: 40px;
-  width: 94%;
-  display: flex;
-
-  border-color: #ffffff;
-}
-
-.lidos{
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
+  justify-content: space-around;
 }

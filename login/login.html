@@ -75,8 +75,22 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="./login.js"></script>
+    <script src="login.js"></script>
     <script src="/comum/comum.js"></script>
+    <script>
+    window.onload = function() {
+        var inputs = document.getElementsByClassName('input-form');
+        for(let i=0; i<inputs.length; i++) {
+            inputs[i].addEventListener('blur', function() {
+                if(this.value.trim() !== "") {
+                    this.classList.add('has-val');
+                } else {
+                    this.classList.remove('has-val');
+                }
+            })
+        }
+    }
+    </script>
 </body>
 
 </html>

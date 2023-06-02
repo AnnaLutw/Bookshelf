@@ -1,13 +1,17 @@
 
   /* ini: Preloader */
  
+*{
+  padding: 0;
+  margin: 0;
+}
 #preloader {
     position:fixed;
     top:0;
     left:0;
     right:0;
     bottom:0;
-    background-color:#a52a2a; /* cor do background que vai ocupar o body */
+    background-color:#337ab7; /* cor do background que vai ocupar o body */
     z-index:999; /* z-index para jogar para frente e sobrepor tudo */
 }
 #preloader .inner {
@@ -67,15 +71,6 @@
 *{
   margin: 0;
 }
-#navbar{
-  background-color: #a52a2a;
-  height: 200px;
-}
-#logo{ 
-  width: 130px;
-  margin-left: 50px;
-  margin-top: 22px;
-}
 #btn{
   margin-left: 12px;
   background-color: #D1C6BB;
@@ -96,14 +91,7 @@ ul{
 
   width: 50%;
 }
-#row{
-  display: flex;
-  margin-top: -57px;
-  margin-left: 41%;
-  
-  width: 25%;
-  
-}
+
 
 #btnPesquisa{
   background-color: #000000;

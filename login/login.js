@@ -14,7 +14,7 @@ logar = function(){
             }
             else{           
                 localStorage.setItem ('usuario', usuario);
-                window.location.href= "../index.html"
+                window.location.href= "../index2.html"
                 console.log("Logado");
             }
         }
@@ -24,9 +24,9 @@ logar = function(){
    
     xhr.send("email=" + email + "&senha=" + senha);
    
-
-   
    
 }
+
+
 
  
