@@ -35,7 +35,9 @@ function handleCredentialResponse(response) {
     let nome = data.name
     let email = data.email
     let id = data.sub
-    loginGoogle(nome, email, id);
+    let picture = data.picture
+
+    loginGoogle(nome, email, id, picture);
    
 }
 window.onload = function () {
@@ -55,11 +57,12 @@ window.onload = function () {
     google.accounts.id.prompt(); // also display the One Tap dialog
 }
 
-loginGoogle =(nome,email,id) =>{
+loginGoogle =(nome,email,id, picture) =>{
     const usuarioParam = {
         usuario: nome,
         email: email,
         id: id,
+        picture: picture
     }
     const usuario = JSON.stringify(usuarioParam);
     localStorage.setItem('usuario', usuario);

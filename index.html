@@ -21,7 +21,7 @@
     <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
 </head>
 
-<body >
+<body onload="initLogin()">
 
 <div id="navbarLoggedOut" ></div>
 
@@ -30,8 +30,8 @@
 
     <div class="principal">
         <div style="background: rgba(0, 0, 0, 0.1); padding: 1px; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <h3 style="font-size: 41px; color: #fff; font-family: 'Fredoka', sans-serif;">Troque livros com leitores iguais a você!</h3>
-            <h6 style="font-size: 20px; color: #fff; margin-top: 20px;">Economize dinheiro, encontre pessoas interessantes e consuma menos.</h6>
+            <h3 style="font-size: 41px; color: #fff; font-family: 'Fredoka', sans-serif;">Ache o livro dos seus sonhos</h3>
+            <h6 style="font-size: 20px; color: #fff; margin-top: 20px;">Economize tempo, organize seus livros com muita facilidade</h6>
             <div id="row" class="input-field" style="display: flex; justify-content: center; margin-top: 47px;">
                 <input id="campoBuscar" type="text" class="form-control" placeholder="Buscar Livro" style="width: 529px; height: 42px; display: inline; margin-right: 10px;">
                 <button id="btnPesquisa" class="btn" onclick="pesquisar()" style="width: 87px; height: 40px; background-color: #337ab7; color: #fff;">Buscar</button>
