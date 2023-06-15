@@ -66,7 +66,7 @@ loginGoogle =(nome,email,id, picture) =>{
     }
     const usuario = JSON.stringify(usuarioParam);
     localStorage.setItem('usuario', usuario);
-    window.location.href = "../index2.html"
+    window.location.href = "../index.html"
     alert("LOGADA")
 }
 
