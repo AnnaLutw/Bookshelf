@@ -25,7 +25,7 @@ const mostraInfoUsuario = function () {
 
 logout = function () {
   localStorage.setItem('usuario', undefined);
-  window.location.href = "../index2.html";
+  window.location.href = "../index.html";
 }
 
 /* ================MOSTRAR NAVBAR LOGADO OU NÃO  =====================*/
