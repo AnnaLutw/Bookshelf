@@ -1,6 +1,4 @@
 const mostraLivro = function(data){
-
-
     let dadosHTML ='<div class="row">';
     let dadosLivros = JSON.parse(data.target.response);
     localStorage.setItem('books', data.target.response)
@@ -9,7 +7,7 @@ const mostraLivro = function(data){
     for(let i=0; i<dadosLivros.items.length ; i++){
         let livro = dadosLivros.items[i];
         dadosHTML+=`
-            <div class="col-3 " style="margin-bottom:20px">
+            <div class="col-2" style="margin-bottom:20px">
                 <div class="card">
                     <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> 
                         <img class="card-img-top" src="${livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : imagemPadrao}" alt="Card image cap">
@@ -21,7 +19,7 @@ const mostraLivro = function(data){
                 </div>
             </div>
         `;
-        if ((i+1) % 3 === 0 && i !== (dadosLivros.items.length - 1)) {
+        if ((i+1) % 5 === 0 && i !== (dadosLivros.items.length - 1)) {
             dadosHTML += '</div><div class="row">';
         }
     }
@@ -52,12 +50,7 @@ const mostraLivro = function(data){
     xhr.open('GET',url, true);
     xhr.send();
     }
-    
-    
-    
-    
-    
-    
+
     pesquisar=function(){
     const campoPesquisa = document.getElementById('campoBuscar').value;
     if(campoPesquisa !== ''){
@@ -92,7 +85,7 @@ const mostraLivro = function(data){
                       <a class="nav-link navbar-links" href="../lidos/lidos.html" style="">Lidos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link navbar-links" href="../login/login.html" style=" margin-left: 456px; ">Entrar</a>
+                      <a class="nav-link navbar-links" href="../login/login.html" style="margin-left: 1000px; ">Entrar</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="../cadastro/cadastro.html" style="display: flex; justify-content: center; align-items: center; color: #fff; margin-left: 26px; background-color: #337ab7; width: 120px; height: 35px; border-radius: 8px; padding: 6px 12px; font-family: 'Nunito', sans-serif;">Cadastre-se</a>
@@ -130,7 +123,7 @@ const mostraLivro = function(data){
                     </li>
       
                     <li class="nav-item" style="display: flex; align-items: center;">
-                    <a href="../perfil/PaginaPerfil.html" style="text-decoration: none"> <img src="${usuario.picture}" id="imgUser" style="border-radius: 30px;width:50px;margin-left: 450px; "></img></a>
+                    <a href="../perfil/PaginaPerfil.html" style="text-decoration: none"> <img src="${usuario.picture}" id="imgUser" style="border-radius: 30px;width:50px;margin-left: 1000px; "></img></a>
                     <span id="loginUser" style="margin-left: 10px;"> ${usuario.usuario}</span>
                     </li>
                   </ul>

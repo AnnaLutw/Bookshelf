@@ -28,7 +28,7 @@ const initLogin = function () {
                   <a class="nav-link navbar-links" href="../lidos/lidos.html" style="">Lidos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link navbar-links" href="../login/login.html" style=" margin-left: 456px; ">Entrar</a>
+                  <a class="nav-link navbar-links" href="../login/login.html" style=" margin-left: 1000px; ">Entrar</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../cadastro/cadastro.html" style="display: flex; justify-content: center; align-items: center; color: #fff; margin-left: 26px; background-color: #337ab7; width: 120px; height: 35px; border-radius: 8px; padding: 6px 12px; font-family: 'Nunito', sans-serif;">Cadastre-se</a>
@@ -66,7 +66,7 @@ const initLogin = function () {
                 </li>
   
                 <li class="nav-item" style="display: flex; align-items: center;">
-                <a href="../perfil/PaginaPerfil.html" style="text-decoration: none"> <img src="${usuario.picture}" id="imgUser" style="border-radius: 30px;width:50px;margin-left: 450px; "></img></a>
+                <a href="../perfil/PaginaPerfil.html" style="text-decoration: none"> <img src="${usuario.picture}" id="imgUser" style="border-radius: 30px;width:50px;margin-left: 1000px; "></img></a>
                 <span id="loginUser" style="margin-left: 10px;"> ${usuario.usuario}</span>
                 </li>
               </ul>
