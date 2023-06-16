@@ -8,7 +8,7 @@ mostraLivro = function() {
       document.getElementById('livrosFavoritos').innerHTML += `
   
           <div class="col-3" id="listaLivros">
-            <div id="books" class="card col-sm-12">
+            <div id="books" class="card col-sm">
               <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}">
                 <img class="card-img-top" src="${livro.thumbnail || imagemPadrao}" alt="Card image cap">
               </a>
